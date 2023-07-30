@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>JustDo Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../static/adminResources/css/themify-icons.css">
+    <link rel="stylesheet" href="../../static/adminResources/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../../static/adminResources/css/vendor.bundle.addons.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <link rel="stylesheet" href="../../static/adminResources/css/materialdesignicons.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../../static/adminResources/css/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../../static/adminResources/images/favicon2.ico"/>
+</head>
+
+<body>
+<div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+
+    {% include 'admin/header.html' %}
+
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+
+        {% include 'admin/menu.html' %}
+
+        <!-- partial -->
+        <div class="main-panel">
+            <div class="content-wrapper">
+                <div class="row grid-margin">
+                    <div class="col-lg-12">
+                        <div class="card1">
+                            <div class="card-header custom-card-header">
+                                <h3 class="mb-0 text-white">Vehicle Detect</h3>
+                            </div>
+                            <div class="card-body">
+                                <form class="cmxform"  method="POST" action="/add_video" enctype="multipart/form-data">
+                                    <fieldset>
+
+                                        <div class="form-group">
+                                            <input type="file" name="video" class="file-upload-default" accept="video/H264" id="video">
+                                            <div class="input-group col-xs-12">
+                                                <input type="text" class="form-control file-upload-info" disabled=""
+                                                       placeholder="Upload Video" fdprocessedid="ldx84m" name="video_text">
+                                                <span class="input-group-append">
+                                            <button class="file-upload-browse btn btn-primary" type="button"
+                                                    fdprocessedid="lhqgoc" name="output_video">Upload</button>
+                                            </span>
+                                            </div>
+                                        </div>
+
+
+                                        <button class="btn btn-primary d-flex align-items-center" type="submit">
+                                            <i class="mdi mdi-crosshairs mr-1"></i>
+                                            <span>Detect</span>
+                                        </button>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content-wrapper ends -->
+            <!-- partial:../../partials/_footer.html -->
+
+            {% include 'admin/footer.html' %}
+
+            <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+<!-- plugins:js -->
+<script src="../../static/adminResources/js/vendor.bundle.base.js"></script>
+<script src="../../static/adminResources/js/vendor.bundle.addons.js"></script>
+<!-- endinject -->
+<!-- inject:js -->
+<script src="../../static/adminResources/js/off-canvas.js"></script>
+<script src="../../static/adminResources/js/hoverable-collapse.js"></script>
+<script src="../../static/adminResources/js/template.js"></script>
+<script src="../../static/adminResources/js/settings.js"></script>
+<script src="../../static/adminResources/js/todolist.js"></script>
+<!-- endinject -->
+<!-- Custom js for this page-->
+<script src="../../static/adminResources/js/form-validation.js"></script>
+<script src="../../static/adminResources/js/bt-maxLength.js"></script>
+<!-- End custom js for this page-->
+<script src="../../static/adminResources/js/file-upload.js"></script>
+</body>
+
+</html>

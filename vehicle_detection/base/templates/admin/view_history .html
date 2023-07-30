@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Detection Historys</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../static/adminResources/css/themify-icons.css">
+    <link rel="stylesheet" href="../../static/adminResources/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../../static/adminResources/css/vendor.bundle.addons.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <link rel="stylesheet" href="../../static/adminResources/css/materialdesignicons.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../../static/adminResources/css/style.css">
+    <!-- endinject -->
+    <link rel="stylesheet" href="../../static/adminResources/css/videoPreview.css">
+    <link rel="shortcut icon" href="../../static/adminResources/images/favicon2.ico"/>
+</head>
+
+<body>
+<div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+
+    {% include 'admin/header.html' %}
+
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+
+        {% include 'admin/menu.html' %}
+
+        <!-- partial -->
+        <div class="main-panel">
+            <div class="content-wrapper">
+                <div class="card4">
+                    <div class="card-header custom-card-header">
+                        <h3 class="mb-0 text-white">Detection History</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table id="order-listing" class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Input Video</th>
+                                            <th>Output Video</th>
+                                            <th>Entry Count</th>
+                                            <th>Exit Count</th>
+                                            <th>Action</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        {% for i in video_vo_list %}
+                                        <tr>
+                                            <td class="video_date">{{ i['video_date'] }}</td>
+                                            <td>
+                                                {# Video For loop start here  -  !!! don't change SRC !!! video path give in
+                                               title and name in alt#}
+
+                                                <img id="myImg" src="../../static/adminResources/images/playButton.jpg"
+                                                     title="{{ i['input_video'] }}"
+                                                     alt="Input Video"
+                                                     style="width:50%;" onclick="videoPreview(this)">
+                                                {# Video For loop end here#}
+                                            </td>
+{#                                            <td>#}
+{#                                                <span class="badge badge-success">Complete</span>#}
+{#                                            </td>#}
+                                            <td>
+                                                {# Video For loop start here  -  !!! don't change SRC !!! video path give in
+                                               title and name in alt#}
+                                                <img id="myImg" src="../../static/adminResources/images/playButton.jpg"
+                                                     title="{{ i['output_video'] }}"
+                                                     alt="Output video"
+                                                     style="width:50%;" onclick="videoPreview(this)">
+                                                {# Video For loop end here#}
+                                            </td>
+                                            <td>{{ i['video_entry_count'] }}</td>
+                                            <td>{{ i['video_exit_count'] }}</td>
+                                            <td>
+                                                <a href="/delete_video?videoId={{ i['video_id'] }}">
+                                                    <i class="mdi mdi-delete lead text-danger"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content-wrapper ends -->
+            <!-- partial:../../partials/_footer.html -->
+
+            {% include 'admin/footer.html' %}
+
+            <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="custom-modal">
+    <span class="close" onclick="modalClose()">&times;</span>
+    <video class="modal-content" style="margin-left: 14rem;width: 70%"  id="img01" controls></video>
+    <div id="caption"></div>
+</div>
+`
+<!-- container-scroller -->
+<!-- plugins:js -->
+<script src="../../static/adminResources/js/vendor.bundle.base.js"></script>
+<script src="../../static/adminResources/js/vendor.bundle.addons.js"></script>
+<!-- endinject -->
+<!-- inject:js -->
+<script src="../../static/adminResources/js/off-canvas.js"></script>
+<script src="../../static/adminResources/js/hoverable-collapse.js"></script>
+<script src="../../static/adminResources/js/template.js"></script>
+<script src="../../static/adminResources/js/settings.js"></script>
+<script src="../../static/adminResources/js/todolist.js"></script>
+<!-- endinject -->
+<!-- Custom js for this page-->
+<script src="../../static/adminResources/js/data-table.js"></script>
+<script src="../../static/adminResources/js/videoPreview.js"></script>
+<!-- End custom js for this page-->
+</body>
+
+</html>

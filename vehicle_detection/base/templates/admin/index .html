@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>JustDo Admin</title>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="../../static/adminResources/css/themify-icons.css">
+    <link rel="stylesheet" href="../../static/adminResources/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../../static/adminResources/css/vendor.bundle.addons.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <link rel="stylesheet" href="../../static/adminResources/css/materialdesignicons.min.css">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../../static/adminResources/css/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="../../static/adminResources/images/favicon2.ico"/>
+</head>
+<body>
+<div class="container-scroller">
+    <!-- partial:partials/_navbar.html -->
+
+    {% include 'admin/header.html' %}
+
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+
+        {% include 'admin/menu.html' %}
+
+        <!-- partial -->
+        <div class="main-panel">
+            <div class="content-wrapper">
+                <div class="row">
+
+                    <div class="col-md-3 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title text-md-center text-xl-left">
+                                    Total entry count
+                                </p>
+                                <div class="mb-2 d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
+                                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">
+                                        {{ entry }}
+                                    </h3>
+                                    <i class="ti-car icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title text-md-center text-xl-left">
+                                    Total exit count
+                                </p>
+                                <div class="mb-2 d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
+                                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">
+                                        {{ exit }}
+                                    </h3>
+                                    <i class="ti-car icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--div class="col-md-3 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title text-md-center text-xl-left">
+                                    Today entry count
+                                </p>
+                                <div class="mb-2 d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
+                                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">
+                                        34040
+                                    </h3>
+                                    <i class="ti-car icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div-->
+
+                    <!--div class="col-md-3 grid-margin stretch-card">
+                        <div class="card">
+                            <div class="card-body">
+                                <p class="card-title text-md-center text-xl-left">
+                                    Today exit count
+                                </p>
+                                <div class="mb-2 d-flex flex-wrap justify-content-between justify-content-md-center justify-content-xl-between align-items-center">
+                                    <h3 class="mb-0 mb-md-2 mb-xl-0 order-md-1 order-xl-0">
+                                        34040
+                                    </h3>
+                                    <i class="ti-car icon-md text-muted mb-0 mb-md-3 mb-xl-0"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div-->
+
+                </div>
+            </div>
+            <!-- content-wrapper ends -->
+            <!-- partial:partials/_footer.html -->
+
+            {% include 'admin/footer.html' %}
+
+            <!-- partial -->
+        </div>
+        <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+
+<!-- plugins:js -->
+<script src="../../static/adminResources/js/vendor.bundle.base.js"></script>
+<script src="../../static/adminResources/js/vendor.bundle.addons.js"></script>
+<!-- endinject -->
+<!-- Plugin js for this page-->
+<!-- End plugin js for this page-->
+<!-- inject:js -->
+<script src="../../static/adminResources/js/off-canvas.js"></script>
+<script src="../../static/adminResources/js/hoverable-collapse.js"></script>
+<script src="../../static/adminResources/js/template.js"></script>
+<script src="../../static/adminResources/js/settings.js"></script>
+<script src="../../static/adminResources/js/todolist.js"></script>
+<!-- endinject -->
+<!-- Custom js for this page-->
+<script src="../../static/adminResources/js/dashboard.js"></script>
+<!-- End custom js for this page-->
+</body>
+
+</html>
+
